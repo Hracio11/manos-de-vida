@@ -1,0 +1,106 @@
+/* Paleta de colores inspirada en la web de ejemplo */
+:root {
+    --color-principal: #6c8a51; /* Verde orgánico */
+    --color-fondo: #f8f8f8;
+    --color-texto: #333;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+header {
+    background-color: white;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--color-texto);
+    margin-left: 20px;
+}
+
+/* Estilo para tarjetas de producto (inspirado en la grilla de la web de ejemplo) */
+#productos-destacados {
+    padding: 40px 50px;
+    text-align: center;
+}
+
+#productos-destacados h3 {
+    color: var(--color-principal);
+    margin-bottom: 30px;
+}
+/* Aquí se definiría la cuadrícula para la grilla de productos (usando display: grid o flex) */
+
+/* Estilo para el botón de Acceso a Compradores/Venta Online */
+#accesoCompradores {
+    background-color: var(--color-principal);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* ================================
+   NOTIFICACIONES TOAST PERSONALIZADAS
+   ================================ */
+
+.toast-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #6c8a51; /* Verde de Manos de Vida */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1050; /* Mayor que el modal */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(100%);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+
+.toast-notification.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Estilos para calificación por estrellas */
+.product-rating .bi {
+    color: #f0c040; /* color dorado para las estrellas */
+    font-size: 1.05rem;
+    margin-right: 3px;
+    transition: transform 0.08s ease;
+}
+.product-rating .bi:hover {
+    transform: scale(1.15);
+}
+.product-rating { display: inline-block; }
+
+/* Secciones principales */
+section { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+
+.maker-link { color: #2f6b2f; text-decoration: underline; }
+.maker-link:hover { color: #275a27; text-decoration: none; }
+
+/* Estilos para el carrusel hero */
+.carousel-item img {
+    height: 600spx;
+    object-fit: cover;
+}
+.carousel-caption {
+    background: rgba(0,0,0,0.35);
+    padding: 0.8rem 1rem;
+    border-radius: 0.4rem;
+}
